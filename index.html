@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Skycast</h1>
+        <form id="weatherForm">
+            <input type="text" name="city" id="city" placeholder="Enter city name" required>
+            <button type="submit">Get Weather</button>
+        </form>
+        <div id="weatherResult" class="result hidden">
+            <h2 id="cityName"></h2>
+            <p id="countryName"></p>
+            <p id="description"></p>
+            <p id="temperature"></p>
+            <p id="feelsLike"></p>
+            <p id="minTemp"></p>
+            <p id="maxTemp"></p>
+            <p id="humidity"></p>
+            <p id="pressure"></p>
+            <p id="windSpeed"></p>
+            <img id="weatherIcon" alt="Weather Icon">
+        </div>
+        <p id="errorMessage" class="error hidden"></p>
+    </div>
+
+    <script src="/static/script.js"></script>
+</body>
+</html>
+
